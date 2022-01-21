@@ -1,7 +1,0 @@
-Quantidade_senhas = 1
-Tamanho_mínimo = 5
-Tamanho_Máximo = 256
-Numéricos = N
-Maiúsculas = N
-Minusculas = S
-Especiais = N

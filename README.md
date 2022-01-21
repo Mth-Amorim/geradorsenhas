@@ -8,10 +8,10 @@ Imagina um cenário aonde você tem que gerenciar as senhas de diversas pessoas 
 essa ferramenta em python foi desenvolvida para criar senhas aleatórias com base em parâmetros predefinidos .... cada senha é gerada aleatoriamente com base nos caracteres escolhidos e definidos nos parâmetros om o único e exclusivo proposito de testar as habilidades python dos desenvolvedores. 
 
 #### Habilidades testadas 
-[  ] - Manipulação de STRINGS
-[  ] - Manipulação de TXT 
-[  ] - Trabalhar com condições 
-[  ] - Trabalhar com listas  
+[ x ] - Manipulação de STRINGS
+[ x ] - Manipulação de TXT 
+[ x ] - Trabalhar com condições 
+[ x ] - Trabalhar com listas  
 
 ##### Objetivos e funções do projeto e seus status 
 
@@ -26,3 +26,7 @@ essa ferramenta em python foi desenvolvida para criar senhas aleatórias com bas
 |PENDENTE                           | Gerar uma senha aleatória com a palavra base                                                |                  |
 |PENDENTE                           | Gerar todas as combinações possíveis de caracteres entre a quantidade mínima e máxima       |                  |
 |PENDENTE                           | Gerar em TXT ou CSV                                                                         |                  |
+
+
+#### Versoes e atualizações 
+20/01 - Atualização do sistema pra pedir ao usuario os parametros e fazer a geração das senhas 
