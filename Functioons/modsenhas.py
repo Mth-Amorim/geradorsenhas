@@ -1,5 +1,59 @@
 import random
 
+class senha:
+    """
+    Criar uma senha e através dos parrametros dela alterar propriedades e recursos das senhas 
+
+    Atributos: 
+        Tamanho (int):  Comprimento da senha em quantidade de dígitos 
+        quantidade (int): Quantas senhas serao geradas 
+        digitos_minuscula (bolean): Configura se a senha  via ter letras minusculas 
+        digitos_maiusculas (bolean): Configura se a senha  via ter letras maiúsculas
+        digito_numerico (bolean): Configura se a senha vai ter dígitos numericos  
+        digitos_especiais (bolean): Configura se a senha vai ter digitos especiais 
+    """
+    
+    @staticmethod
+    def _escolher(opcoes:list):
+        return random.choice(opcoes)
+
+    def __init__(self, Quantidade=1, tamanho = 8, minuscula = True, maiuscula = True, numerico = True, especial = True ):
+        self.tamanho = tamanho
+        self.digitos_minuscula = minuscula
+        self.digitos_maiusculas = maiuscula
+        self.digito_numerico = numerico
+        self.digitos_especiais = especial
+        self.quantidade = Quantidade
+        self.__digitos = self._listar_digitos()
+        self.__senhas = self.Gerar_Senha()
+        
+        pass
+
+    def Gerar_Senha(self):
+        lista = []
+        for senhas in self.quantidade:
+            for x in range(self.tamanho):
+                senha = senha + chr(self._escolher(self.__digitos))
+            lista.append(senha)
+        return lista
+
+    def show(self):
+        for senhas in self.__senhas:
+            print("Senha Gerada: {}".format(senhas))
+        pass
+
+    def _listar_digitos(self):
+        lista = []
+        if self.digitos_minuscula:
+            lista.extend(list(range(97,122)))
+        if self.digitos_maiusculas:
+            lista.extend(list(range(65,90)))
+        if self.digito_numerico:
+            lista.extend(list(range(48,57)))
+        if self.digitos_especiais:
+            lista.extend(list(range(33,47)))
+        return lista
+
 # Retorna uma lista com numeros (ids) de caracteres baseado nos parametros informados 
 def listas_chars(Parametros:dict):
     lista = []
@@ -10,6 +64,7 @@ def listas_chars(Parametros:dict):
     if Parametros['Maiúsculas']:
         lista.extend(list(range(65,90)))
     # gera uma lista com os id de  numeros 
+        lista.extend(list(range(48,57)))
     if Parametros['Numerico']:
         lista.extend(list(range(48,57)))
     # gera uma lista com os id de  Especiais
